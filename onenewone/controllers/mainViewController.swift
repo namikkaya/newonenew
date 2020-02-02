@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  mainViewController.swift
 //  onenewone
 //
 //  Created by namik kaya on 2.02.2020.
@@ -8,15 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class mainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-    
-    
-
 
 }
-
