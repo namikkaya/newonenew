@@ -140,7 +140,7 @@ extension UIViewController {
         if #available(iOS 8.2, *) {
             attrs = [
                 /*NSAttributedString.Key.shadow: textShadow,*/
-                NSAttributedString.Key.foregroundColor: UIColor.black,
+                NSAttributedString.Key.foregroundColor: UIColor.white,
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
             ]
         } else {

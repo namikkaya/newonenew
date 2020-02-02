@@ -14,6 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XXg-wq-oLO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.31138203120000002" green="0.73822053109999997" blue="0.29567119390000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="pni-vF-e9C" kind="relationship" relationship="rootViewController" id="bdC-wY-9pk"/>
@@ -89,14 +90,114 @@
                     <view key="view" contentMode="scaleToFill" id="Vq8-sj-cR8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hemen profilini doldurmaya başla. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdu-T3-8PD">
+                                <rect key="frame" x="20" y="152" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a8-6v-Ab1" customClass="GradientButton" customModule="onenewone" customModuleProvider="target">
+                                <rect key="frame" x="134" y="208" width="146" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="GyI-mt-giG"/>
+                                    <constraint firstAttribute="height" constant="48" id="gbw-Go-QSb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Hadi Başlayalım">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="mySetCorner">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                        <color key="value" red="0.31138203124095343" green="0.73822053108808294" blue="0.29567119392428282" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                        <color key="value" red="0.34556170119891422" green="0.50151142639254465" blue="0.78973040803108807" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="9mq-PE-nnB" kind="show" identifier="segueStart" id="9dZ-oJ-Scc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jdu-T3-8PD" firstAttribute="leading" secondItem="zG3-Gy-iyt" secondAttribute="leading" constant="20" id="3J8-6w-Try"/>
+                            <constraint firstItem="zG3-Gy-iyt" firstAttribute="trailing" secondItem="jdu-T3-8PD" secondAttribute="trailing" constant="20" id="7gA-7M-THD"/>
+                            <constraint firstItem="0a8-6v-Ab1" firstAttribute="centerX" secondItem="Vq8-sj-cR8" secondAttribute="centerX" id="MRA-a4-UoO"/>
+                            <constraint firstItem="0a8-6v-Ab1" firstAttribute="top" secondItem="jdu-T3-8PD" secondAttribute="bottom" constant="32" id="ph7-tM-xCY"/>
+                            <constraint firstItem="jdu-T3-8PD" firstAttribute="top" secondItem="zG3-Gy-iyt" secondAttribute="top" constant="64" id="zhH-0y-nwU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zG3-Gy-iyt"/>
                     </view>
                     <navigationItem key="navigationItem" id="d2o-C5-0Hd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN1-HO-wCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="69"/>
+            <point key="canvasLocation" x="918.84057971014499" y="68.973214285714278"/>
+        </scene>
+        <!--User Get Photo View Controller-->
+        <scene sceneID="v6o-i1-18d">
+            <objects>
+                <viewController storyboardIdentifier="userGetPhotoViewControllerID" id="9mq-PE-nnB" customClass="userGetPhotoViewController" customModule="onenewone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cm-ke-QNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CV' nizde görüntülenecek fotoğrafınız galerinizde var ise lütfen bu adımda ekleneyiniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUL-gi-1Xq">
+                                <rect key="frame" x="20" y="152" width="374" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2h-Sw-0KB">
+                                <rect key="frame" x="126" y="252" width="162" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="iWF-dp-K29"/>
+                                    <constraint firstAttribute="width" constant="162" id="j4H-0x-hBX"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="camera.viewfinder" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="152"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButtonEvent:" destination="9mq-PE-nnB" eventType="touchUpInside" id="mNu-m2-S8n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6O9-Ws-SXx">
+                                <rect key="frame" x="163" y="428" width="88" height="30"/>
+                                <state key="normal" title="Bu adımı atla"/>
+                                <connections>
+                                    <action selector="openCameraButtonEvent:" destination="9mq-PE-nnB" eventType="touchUpInside" id="hkh-sQ-7VA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6O9-Ws-SXx" firstAttribute="centerX" secondItem="9cm-ke-QNZ" secondAttribute="centerX" id="LVx-an-jrq"/>
+                            <constraint firstItem="6O9-Ws-SXx" firstAttribute="top" secondItem="L2h-Sw-0KB" secondAttribute="bottom" constant="16" id="Olh-gW-Z6V"/>
+                            <constraint firstItem="AUL-gi-1Xq" firstAttribute="top" secondItem="R5c-1n-My1" secondAttribute="top" constant="64" id="SG5-da-u3b"/>
+                            <constraint firstItem="AUL-gi-1Xq" firstAttribute="leading" secondItem="R5c-1n-My1" secondAttribute="leading" constant="20" id="aHg-qq-wP6"/>
+                            <constraint firstItem="R5c-1n-My1" firstAttribute="trailing" secondItem="AUL-gi-1Xq" secondAttribute="trailing" constant="20" id="aLA-9P-LcK"/>
+                            <constraint firstItem="L2h-Sw-0KB" firstAttribute="top" secondItem="AUL-gi-1Xq" secondAttribute="bottom" constant="28" id="i2C-8f-CYd"/>
+                            <constraint firstItem="L2h-Sw-0KB" firstAttribute="centerX" secondItem="9cm-ke-QNZ" secondAttribute="centerX" id="i7Z-JM-yVc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R5c-1n-My1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pbI-3V-IFr"/>
+                    <connections>
+                        <outlet property="cameraButtonObject" destination="L2h-Sw-0KB" id="DWS-RW-5V6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mD-s8-oJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718.840579710145" y="68.973214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.viewfinder" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

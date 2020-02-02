@@ -1,5 +1,5 @@
 //
-//  mainViewController.swift
+//  userGetPhotoViewController.swift
 //  onenewone
 //
 //  Created by namik kaya on 2.02.2020.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class mainViewController: BaseViewController {
+class userGetPhotoViewController: BaseViewController {
     private var dbMan:dataBaseManager?
+    @IBOutlet weak var cameraButtonObject: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIConfig()
         DBConfig()
-        navigationConfig()
     }
     
 //    MARK:- Class Configuration
@@ -27,8 +27,7 @@ class mainViewController: BaseViewController {
     }
     
     private func navigationConfig() {
-        self.setNavigationBarTitle(titleText: "Hoşgeldiniz")
-        //self.setNavigationColor(color: UIColor.blue)
+        self.setNavigationBarTitle(titleText: "Profil Fotoğrafı")
     }
     
     
@@ -38,6 +37,17 @@ class mainViewController: BaseViewController {
         navigationItem.backBarButtonItem = backItem
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
+    
+//    MARK:- IBAction
+    
+    @IBAction func cameraButtonEvent(_ sender: Any) {
+        
+    }
+    
+    @IBAction func openCameraButtonEvent(_ sender: Any) {
+        
+    }
+    
     
 
 }
