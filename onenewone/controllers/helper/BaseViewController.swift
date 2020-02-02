@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reachability
 
 class BaseViewController: UIViewController {
     private let TAG:String = "BaseViewController: "

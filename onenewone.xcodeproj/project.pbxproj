@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,11 @@
 		4D205E2423E728CF00F3BC19 /* onenewoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E2323E728CF00F3BC19 /* onenewoneUITests.swift */; };
 		4D205E3623E72A6500F3BC19 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E3523E72A6500F3BC19 /* mainViewController.swift */; };
 		4D205E3923E72A9D00F3BC19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E3823E72A9D00F3BC19 /* BaseViewController.swift */; };
+		4D205E3B23E72CE300F3BC19 /* ReachbilityPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E3A23E72CE300F3BC19 /* ReachbilityPopupController.swift */; };
+		4D205E3D23E72D1100F3BC19 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E3C23E72D1100F3BC19 /* extensions.swift */; };
+		4D205E3F23E72D5500F3BC19 /* preloaderPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E3E23E72D5500F3BC19 /* preloaderPopupController.swift */; };
+		4D205E4223E72EE200F3BC19 /* reachbilityTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E4123E72EE200F3BC19 /* reachbilityTransition.swift */; };
+		4D205E4423E72F0200F3BC19 /* preloderTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E4323E72F0200F3BC19 /* preloderTransition.swift */; };
 		518B1B479EFD627AF2A844F2 /* Pods_onenewone_onenewoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3654AFCF1256E53E6270C945 /* Pods_onenewone_onenewoneUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 		4D205E2523E728CF00F3BC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D205E3523E72A6500F3BC19 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		4D205E3823E72A9D00F3BC19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4D205E3A23E72CE300F3BC19 /* ReachbilityPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachbilityPopupController.swift; sourceTree = "<group>"; };
+		4D205E3C23E72D1100F3BC19 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		4D205E3E23E72D5500F3BC19 /* preloaderPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preloaderPopupController.swift; sourceTree = "<group>"; };
+		4D205E4123E72EE200F3BC19 /* reachbilityTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reachbilityTransition.swift; sourceTree = "<group>"; };
+		4D205E4323E72F0200F3BC19 /* preloderTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preloderTransition.swift; sourceTree = "<group>"; };
 		B5B8869988F70A0DEF5854D7 /* Pods-onenewone-onenewoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewone-onenewoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-onenewone-onenewoneUITests/Pods-onenewone-onenewoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D07D8922B8D66D163F457D94 /* Pods-onenewone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewone.debug.xcconfig"; path = "Target Support Files/Pods-onenewone/Pods-onenewone.debug.xcconfig"; sourceTree = "<group>"; };
 		F7E72121877BD63DC2A2AEFC /* Pods-onenewoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewoneTests.release.xcconfig"; path = "Target Support Files/Pods-onenewoneTests/Pods-onenewoneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +130,7 @@
 		4D205E0023E728CE00F3BC19 /* onenewone */ = {
 			isa = PBXGroup;
 			children = (
+				4D205E4523E72FD400F3BC19 /* manager */,
 				4D205E3423E72A4800F3BC19 /* views */,
 				4D205E3323E72A4200F3BC19 /* lib */,
 				4D205E3223E72A3B00F3BC19 /* models */,
@@ -172,6 +183,8 @@
 		4D205E3323E72A4200F3BC19 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				4D205E4023E72EBE00F3BC19 /* transitions */,
+				4D205E3C23E72D1100F3BC19 /* extensions.swift */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -187,8 +200,26 @@
 			isa = PBXGroup;
 			children = (
 				4D205E3823E72A9D00F3BC19 /* BaseViewController.swift */,
+				4D205E3A23E72CE300F3BC19 /* ReachbilityPopupController.swift */,
+				4D205E3E23E72D5500F3BC19 /* preloaderPopupController.swift */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		4D205E4023E72EBE00F3BC19 /* transitions */ = {
+			isa = PBXGroup;
+			children = (
+				4D205E4123E72EE200F3BC19 /* reachbilityTransition.swift */,
+				4D205E4323E72F0200F3BC19 /* preloderTransition.swift */,
+			);
+			path = transitions;
+			sourceTree = "<group>";
+		};
+		4D205E4523E72FD400F3BC19 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = manager;
 			sourceTree = "<group>";
 		};
 		7701A1902B76FCFC2B168A62 /* Frameworks */ = {
@@ -211,7 +242,6 @@
 				FAE06D935092CF72514DDB6F /* Pods-onenewoneTests.debug.xcconfig */,
 				F7E72121877BD63DC2A2AEFC /* Pods-onenewoneTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -457,8 +487,13 @@
 				4D205E3923E72A9D00F3BC19 /* BaseViewController.swift in Sources */,
 				4D205E0623E728CE00F3BC19 /* ViewController.swift in Sources */,
 				4D205E0223E728CE00F3BC19 /* AppDelegate.swift in Sources */,
+				4D205E3D23E72D1100F3BC19 /* extensions.swift in Sources */,
 				4D205E0423E728CE00F3BC19 /* SceneDelegate.swift in Sources */,
+				4D205E4423E72F0200F3BC19 /* preloderTransition.swift in Sources */,
+				4D205E4223E72EE200F3BC19 /* reachbilityTransition.swift in Sources */,
+				4D205E3B23E72CE300F3BC19 /* ReachbilityPopupController.swift in Sources */,
 				4D205E3623E72A6500F3BC19 /* mainViewController.swift in Sources */,
+				4D205E3F23E72D5500F3BC19 /* preloaderPopupController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

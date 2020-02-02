@@ -23,10 +23,54 @@
             </objects>
             <point key="canvasLocation" x="98" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Reachbility Popup Controller-->
+        <scene sceneID="Tc7-Rv-MAd">
+            <objects>
+                <viewController storyboardIdentifier="ReachbilityPopupControllerID" id="Lga-m6-tut" customClass="ReachbilityPopupController" customModule="onenewone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQ2-b0-VIc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwO-Wc-JNO">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İnternet bağlantınızı kontrol edip tekrar deneyin." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfY-sO-M8E">
+                                        <rect key="frame" x="8" y="8" width="224" height="112"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qfY-sO-M8E" secondAttribute="bottom" constant="8" id="85a-CZ-kHu"/>
+                                    <constraint firstAttribute="height" constant="128" id="h3U-82-fL1"/>
+                                    <constraint firstItem="qfY-sO-M8E" firstAttribute="leading" secondItem="wwO-Wc-JNO" secondAttribute="leading" constant="8" id="kSO-9L-R2F"/>
+                                    <constraint firstAttribute="trailing" secondItem="qfY-sO-M8E" secondAttribute="trailing" constant="8" id="oi2-Bb-OQw"/>
+                                    <constraint firstItem="qfY-sO-M8E" firstAttribute="top" secondItem="wwO-Wc-JNO" secondAttribute="top" constant="8" id="u9a-kb-0mj"/>
+                                    <constraint firstAttribute="width" constant="240" id="wt3-Pw-mfy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wwO-Wc-JNO" firstAttribute="centerY" secondItem="cQ2-b0-VIc" secondAttribute="centerY" id="2Wa-c1-8X1"/>
+                            <constraint firstItem="wwO-Wc-JNO" firstAttribute="centerX" secondItem="cQ2-b0-VIc" secondAttribute="centerX" id="pS0-oc-AOP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ILZ-RV-BNS"/>
+                    </view>
+                    <connections>
+                        <outlet property="popupView" destination="wwO-Wc-JNO" id="1Eb-11-hvf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRV-VJ-vOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="-588.61607142857144"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="QoR-vc-3LI">
             <objects>
-                <viewController id="pni-vF-e9C" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" id="pni-vF-e9C" customClass="mainViewController" customModule="onenewone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vq8-sj-cR8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
