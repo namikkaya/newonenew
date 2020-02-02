@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SQLite
 
 private var dataAssocKey = 0
 public var myHolderView:UIViewController?
@@ -153,5 +154,14 @@ extension UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attrs
         self.navigationItem.title = titleText
         
+    }
+    
+}
+
+//MARK: - SQLite extension
+extension Connection {
+    public var userVersion: Int32 {
+        get { return Int32(try! scalar("PRAGMA user_version") as! Int64)}
+        set { try! run("PRAGMA user_version = \(newValue)") }
     }
 }

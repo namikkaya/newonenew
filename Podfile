@@ -7,6 +7,7 @@ target 'onenewone' do
 
   # Pods for onenewone
   pod 'ReachabilitySwift'
+  pod 'SQLite.swift', '~> 0.12.0'
   target 'onenewoneTests' do
     inherit! :search_paths
     # Pods for testing

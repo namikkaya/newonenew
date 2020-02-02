@@ -67,6 +67,21 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="-588.61607142857144"/>
         </scene>
+        <!--Preloader Popup Controller-->
+        <scene sceneID="FlV-nG-RpO">
+            <objects>
+                <viewController storyboardIdentifier="preloaderPopupControllerID" id="5zL-x5-JaG" customClass="preloaderPopupController" customModule="onenewone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uBB-o5-gVr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yRN-nr-7ub"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coV-Xt-f3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719" y="-585"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="QoR-vc-3LI">
             <objects>

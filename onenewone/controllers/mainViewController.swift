@@ -9,10 +9,21 @@
 import UIKit
 
 class mainViewController: BaseViewController {
-
+    private var dbMan:dataBaseManager?
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIConfig()
+        DBConfig()
+    }
+    
+//    MARK:- Class Configuration
+    private func UIConfig() {
         
     }
+    
+    private func DBConfig() {
+        dbMan = dataBaseManager.sharedInstance
+    }
+    
 
 }

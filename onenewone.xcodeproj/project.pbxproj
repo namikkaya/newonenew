@@ -24,6 +24,8 @@
 		4D205E3F23E72D5500F3BC19 /* preloaderPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E3E23E72D5500F3BC19 /* preloaderPopupController.swift */; };
 		4D205E4223E72EE200F3BC19 /* reachbilityTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E4123E72EE200F3BC19 /* reachbilityTransition.swift */; };
 		4D205E4423E72F0200F3BC19 /* preloderTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E4323E72F0200F3BC19 /* preloderTransition.swift */; };
+		4D205E4823E7334300F3BC19 /* dataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E4723E7334300F3BC19 /* dataBaseManager.swift */; };
+		4D205E4B23E7341D00F3BC19 /* userDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E4A23E7341D00F3BC19 /* userDB.swift */; };
 		518B1B479EFD627AF2A844F2 /* Pods_onenewone_onenewoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3654AFCF1256E53E6270C945 /* Pods_onenewone_onenewoneUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		4D205E3E23E72D5500F3BC19 /* preloaderPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preloaderPopupController.swift; sourceTree = "<group>"; };
 		4D205E4123E72EE200F3BC19 /* reachbilityTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reachbilityTransition.swift; sourceTree = "<group>"; };
 		4D205E4323E72F0200F3BC19 /* preloderTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preloderTransition.swift; sourceTree = "<group>"; };
+		4D205E4723E7334300F3BC19 /* dataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataBaseManager.swift; sourceTree = "<group>"; };
+		4D205E4A23E7341D00F3BC19 /* userDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDB.swift; sourceTree = "<group>"; };
 		B5B8869988F70A0DEF5854D7 /* Pods-onenewone-onenewoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewone-onenewoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-onenewone-onenewoneUITests/Pods-onenewone-onenewoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D07D8922B8D66D163F457D94 /* Pods-onenewone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewone.debug.xcconfig"; path = "Target Support Files/Pods-onenewone/Pods-onenewone.debug.xcconfig"; sourceTree = "<group>"; };
 		F7E72121877BD63DC2A2AEFC /* Pods-onenewoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewoneTests.release.xcconfig"; path = "Target Support Files/Pods-onenewoneTests/Pods-onenewoneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,8 +222,18 @@
 		4D205E4523E72FD400F3BC19 /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				4D205E4923E733CB00F3BC19 /* dataBaseManagerGroup */,
 			);
 			path = manager;
+			sourceTree = "<group>";
+		};
+		4D205E4923E733CB00F3BC19 /* dataBaseManagerGroup */ = {
+			isa = PBXGroup;
+			children = (
+				4D205E4723E7334300F3BC19 /* dataBaseManager.swift */,
+				4D205E4A23E7341D00F3BC19 /* userDB.swift */,
+			);
+			path = dataBaseManagerGroup;
 			sourceTree = "<group>";
 		};
 		7701A1902B76FCFC2B168A62 /* Frameworks */ = {
@@ -484,11 +498,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D205E4B23E7341D00F3BC19 /* userDB.swift in Sources */,
 				4D205E3923E72A9D00F3BC19 /* BaseViewController.swift in Sources */,
 				4D205E0623E728CE00F3BC19 /* ViewController.swift in Sources */,
 				4D205E0223E728CE00F3BC19 /* AppDelegate.swift in Sources */,
 				4D205E3D23E72D1100F3BC19 /* extensions.swift in Sources */,
 				4D205E0423E728CE00F3BC19 /* SceneDelegate.swift in Sources */,
+				4D205E4823E7334300F3BC19 /* dataBaseManager.swift in Sources */,
 				4D205E4423E72F0200F3BC19 /* preloderTransition.swift in Sources */,
 				4D205E4223E72EE200F3BC19 /* reachbilityTransition.swift in Sources */,
 				4D205E3B23E72CE300F3BC19 /* ReachbilityPopupController.swift in Sources */,
