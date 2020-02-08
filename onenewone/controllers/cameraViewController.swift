@@ -13,7 +13,8 @@ class cameraViewController: UIViewController {
     private let TAG:String = "CameraViewController: "
     
     //cameraPreviewView
-    @IBOutlet var cameraPreviewView: UIView!
+    @IBOutlet weak var cameraPreviewView: UIView!
+    
     
     private var camManager:cameraManager?
     
@@ -25,6 +26,7 @@ class cameraViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         print("viewWillAppear")
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.rotated),
@@ -40,6 +42,7 @@ class cameraViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         NotificationCenter.default.removeObserver(self,
                                                   name: UIDevice.orientationDidChangeNotification,
                                                   object: nil)
@@ -79,6 +82,12 @@ class cameraViewController: UIViewController {
         if (camManager != nil) {
             camManager?.changeCamera()
         }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        guard let camMan = camManager else { return }
+        camMan.autoRefreshView()
     }
 
 }

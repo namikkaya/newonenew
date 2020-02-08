@@ -43,20 +43,31 @@ class cameraManager: NSObject {
         
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        videoPreviewLayer?.connection?.videoOrientation = .landscapeRight
+        videoPreviewLayer?.connection?.videoOrientation = .portrait
         // yan
-        if (CGFloat((rootView?.frame.size.height)!) <= CGFloat((rootView?.frame.size.width)!)) {
+        /*if (CGFloat((rootView?.frame.size.height)!) <= CGFloat((rootView?.frame.size.width)!)) {
             videoPreviewLayer?.frame = CGRect(x: 0, y: 0, width: (rootView?.frame.size.width)!, height: (rootView?.frame.size.height)!)
         }else{
             videoPreviewLayer?.frame = CGRect(x: 0, y: 0, width: (rootView?.frame.size.height)!, height: (rootView?.frame.size.width)!)
-        }
+        }*/
+        layer_autoSize()
         
-        previewView!.setNeedsDisplay()
         previewView!.layer.addSublayer(videoPreviewLayer!)
         previewView!.setNeedsDisplay()
         captureSession?.startRunning()
         
     }
+    
+    private func layer_autoSize() {
+        guard let rootView = rootView else { return }
+        videoPreviewLayer?.frame = rootView.frame
+        videoPreviewLayer!.setNeedsDisplay()
+    }
+    
+    func autoRefreshView() {
+        layer_autoSize()
+    }
+    
     
     func getDevice(position: AVCaptureDevice.Position)->AVCaptureDevice? {
         var avCapture:AVCaptureDevice?

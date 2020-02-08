@@ -172,6 +172,7 @@
                                 <state key="normal" title="Bu adımı atla"/>
                                 <connections>
                                     <action selector="openCameraButtonEvent:" destination="9mq-PE-nnB" eventType="touchUpInside" id="hkh-sQ-7VA"/>
+                                    <segue destination="jvt-Ql-aEa" kind="modal" identifier="cameraSegue" modalPresentationStyle="fullScreen" id="gZ5-Kw-3a0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,20 +197,36 @@
             </objects>
             <point key="canvasLocation" x="1718.840579710145" y="68.973214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="aN9-OI-6zG">
             <objects>
-                <viewController id="jvt-Ql-aEa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="btd-8n-Ad7">
+                <viewController storyboardIdentifier="cameraViewControllerID" id="jvt-Ql-aEa" customClass="cameraViewController" customModule="onenewone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="btd-8n-Ad7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEX-OX-h8M">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="kUb-G6-VU5"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="wFL-Qa-ygh"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lEX-OX-h8M" secondAttribute="trailing" id="DCH-vq-PSM"/>
+                            <constraint firstItem="lEX-OX-h8M" firstAttribute="top" secondItem="btd-8n-Ad7" secondAttribute="top" id="Ivj-eC-6uo"/>
+                            <constraint firstAttribute="bottom" secondItem="lEX-OX-h8M" secondAttribute="bottom" id="sXe-96-VbC"/>
+                            <constraint firstItem="lEX-OX-h8M" firstAttribute="leading" secondItem="btd-8n-Ad7" secondAttribute="leading" id="uUz-GE-FoC"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eEc-dU-et0"/>
+                    <connections>
+                        <outlet property="cameraPreviewView" destination="lEX-OX-h8M" id="VSa-BL-X5M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4E6-mW-WU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="69"/>
+            <point key="canvasLocation" x="2547.826086956522" y="68.973214285714278"/>
         </scene>
     </scenes>
     <resources>
