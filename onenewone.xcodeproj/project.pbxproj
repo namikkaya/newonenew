@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		009AE2470C53CD654857599D /* Pods_onenewone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D2FC6789B4D0E28F5375CF /* Pods_onenewone.framework */; };
 		179E1CD0582C44FCF0DF76A9 /* Pods_onenewoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF5CF152E59A4CD3CDB7C72 /* Pods_onenewoneTests.framework */; };
+		4D1D9E2523EEB75B00CB9215 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */; };
+		4D1D9E2823EEB98D00CB9215 /* cameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2723EEB98D00CB9215 /* cameraManager.swift */; };
 		4D205E0223E728CE00F3BC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E0123E728CE00F3BC19 /* AppDelegate.swift */; };
 		4D205E0423E728CE00F3BC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E0323E728CE00F3BC19 /* SceneDelegate.swift */; };
 		4D205E0623E728CE00F3BC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E0523E728CE00F3BC19 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		3654AFCF1256E53E6270C945 /* Pods_onenewone_onenewoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onenewone_onenewoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D2FC6789B4D0E28F5375CF /* Pods_onenewone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onenewone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49EDB5C8EF2597C1F8C091FD /* Pods-onenewone-onenewoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewone-onenewoneUITests.release.xcconfig"; path = "Target Support Files/Pods-onenewone-onenewoneUITests/Pods-onenewone-onenewoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
+		4D1D9E2723EEB98D00CB9215 /* cameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraManager.swift; sourceTree = "<group>"; };
 		4D205DFE23E728CE00F3BC19 /* onenewone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onenewone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D205E0123E728CE00F3BC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D205E0323E728CE00F3BC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1D9E2623EEB8A600CB9215 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D9E2723EEB98D00CB9215 /* cameraManager.swift */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
 		4D205DF523E728CE00F3BC19 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +190,7 @@
 				4D205E3723E72A7700F3BC19 /* helper */,
 				4D205E3523E72A6500F3BC19 /* mainViewController.swift */,
 				4D205E4E23E73DD300F3BC19 /* userGetPhotoViewController.swift */,
+				4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -228,6 +241,7 @@
 		4D205E4523E72FD400F3BC19 /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D9E2623EEB8A600CB9215 /* camera */,
 				4D205E4923E733CB00F3BC19 /* dataBaseManagerGroup */,
 			);
 			path = manager;
@@ -506,11 +520,13 @@
 			files = (
 				4D205E4B23E7341D00F3BC19 /* userDB.swift in Sources */,
 				4D205E3923E72A9D00F3BC19 /* BaseViewController.swift in Sources */,
+				4D1D9E2823EEB98D00CB9215 /* cameraManager.swift in Sources */,
 				4D205E0623E728CE00F3BC19 /* ViewController.swift in Sources */,
 				4D205E0223E728CE00F3BC19 /* AppDelegate.swift in Sources */,
 				4D205E3D23E72D1100F3BC19 /* extensions.swift in Sources */,
 				4D205E0423E728CE00F3BC19 /* SceneDelegate.swift in Sources */,
 				4D205E4823E7334300F3BC19 /* dataBaseManager.swift in Sources */,
+				4D1D9E2523EEB75B00CB9215 /* cameraViewController.swift in Sources */,
 				4D205E4423E72F0200F3BC19 /* preloderTransition.swift in Sources */,
 				4D205E4223E72EE200F3BC19 /* reachbilityTransition.swift in Sources */,
 				4D205E3B23E72CE300F3BC19 /* ReachbilityPopupController.swift in Sources */,
