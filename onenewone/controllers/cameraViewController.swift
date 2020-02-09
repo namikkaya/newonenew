@@ -8,36 +8,39 @@
 
 import UIKit
 
-class cameraViewController: UIViewController {
+class cameraViewController: UIViewController, speakerManagerDelegate, siriSpeakerDelegate {
+    
 
     private let TAG:String = "CameraViewController: "
     
-    //cameraPreviewView
+//    MARK:- Views
     @IBOutlet weak var cameraPreviewView: UIView!
+    @IBOutlet weak var questionView: UIView!
     
     
+//    MARK:- Class
     private var camManager:cameraManager?
+    private var speakerMan:speakerManager?
+    private var siriMan:siriSpeaker?
+    
+    private var questions:[question?] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
-        
+        camManager = cameraManager(root: self.view, preview: cameraPreviewView)
+        speakerMan = speakerManager(preview: questionView, page: INFORMATION_PAGE.baseInformation, vc: self)
+        siriMan = siriSpeaker()
+        siriMan?.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        print("viewWillAppear")
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.rotated),
                                                name: UIDevice.orientationDidChangeNotification,
                                                object: nil)
         
-        if (camManager == nil) {
-            camManager = cameraManager(root: self.view, preview: cameraPreviewView)
-            let orientation = UIDevice.current.orientation.isLandscape
-            print("\(TAG) orientation: \(orientation)")
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,6 +51,14 @@ class cameraViewController: UIViewController {
                                                   object: nil)
         if (camManager != nil) {
             camManager = nil
+        }
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            self.startVoice()
         }
     }
     
@@ -89,5 +100,19 @@ class cameraViewController: UIViewController {
         guard let camMan = camManager else { return }
         camMan.autoRefreshView()
     }
+    
+    
+    private func startVoice() {
+        guard let speaker = speakerMan, let siri = siriMan else { return }
+        let data = speaker.getStepData()
+        siri.startQuestion(sentence: data?.questionSpeech)
+    }
 
+    func speechDidFinish() {
+        
+    }
+    
+    func speechStart() {
+        
+    }
 }

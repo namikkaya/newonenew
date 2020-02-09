@@ -210,11 +210,21 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <viewLayoutGuide key="safeArea" id="kUb-G6-VU5"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJ4-RT-FhK">
+                                <rect key="frame" x="20" y="540" width="374" height="336"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="336" id="hYx-du-8oR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="lEX-OX-h8M" secondAttribute="trailing" id="DCH-vq-PSM"/>
                             <constraint firstItem="lEX-OX-h8M" firstAttribute="top" secondItem="btd-8n-Ad7" secondAttribute="top" id="Ivj-eC-6uo"/>
+                            <constraint firstAttribute="trailing" secondItem="HJ4-RT-FhK" secondAttribute="trailing" constant="20" symbolic="YES" id="JJ1-Mg-4qB"/>
+                            <constraint firstAttribute="bottom" secondItem="HJ4-RT-FhK" secondAttribute="bottom" constant="20" symbolic="YES" id="Y6K-6F-4jd"/>
+                            <constraint firstItem="HJ4-RT-FhK" firstAttribute="leading" secondItem="btd-8n-Ad7" secondAttribute="leading" constant="20" symbolic="YES" id="oTG-Zz-cyF"/>
                             <constraint firstAttribute="bottom" secondItem="lEX-OX-h8M" secondAttribute="bottom" id="sXe-96-VbC"/>
                             <constraint firstItem="lEX-OX-h8M" firstAttribute="leading" secondItem="btd-8n-Ad7" secondAttribute="leading" id="uUz-GE-FoC"/>
                         </constraints>
@@ -222,6 +232,7 @@
                     <navigationItem key="navigationItem" id="eEc-dU-et0"/>
                     <connections>
                         <outlet property="cameraPreviewView" destination="lEX-OX-h8M" id="VSa-BL-X5M"/>
+                        <outlet property="questionView" destination="HJ4-RT-FhK" id="hUb-Gh-J4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4E6-mW-WU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

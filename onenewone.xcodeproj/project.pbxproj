@@ -11,6 +11,12 @@
 		179E1CD0582C44FCF0DF76A9 /* Pods_onenewoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF5CF152E59A4CD3CDB7C72 /* Pods_onenewoneTests.framework */; };
 		4D1D9E2523EEB75B00CB9215 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */; };
 		4D1D9E2823EEB98D00CB9215 /* cameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2723EEB98D00CB9215 /* cameraManager.swift */; };
+		4D1D9E2B23EF06A000CB9215 /* siriSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2A23EF06A000CB9215 /* siriSpeaker.swift */; };
+		4D1D9E2D23EF07A800CB9215 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2C23EF07A800CB9215 /* models.swift */; };
+		4D1D9E3223EF43AF00CB9215 /* speakerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E3123EF43AF00CB9215 /* speakerManager.swift */; };
+		4D1D9E3523EF45E500CB9215 /* userInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D9E3423EF45E500CB9215 /* userInformation.storyboard */; };
+		4D1D9E3823F078DC00CB9215 /* baseInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E3723F078DC00CB9215 /* baseInfoController.swift */; };
+		4D1D9E3C23F0792500CB9215 /* userBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E3B23F0792500CB9215 /* userBaseNavigationController.swift */; };
 		4D205E0223E728CE00F3BC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E0123E728CE00F3BC19 /* AppDelegate.swift */; };
 		4D205E0423E728CE00F3BC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E0323E728CE00F3BC19 /* SceneDelegate.swift */; };
 		4D205E0623E728CE00F3BC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D205E0523E728CE00F3BC19 /* ViewController.swift */; };
@@ -57,6 +63,12 @@
 		49EDB5C8EF2597C1F8C091FD /* Pods-onenewone-onenewoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewone-onenewoneUITests.release.xcconfig"; path = "Target Support Files/Pods-onenewone-onenewoneUITests/Pods-onenewone-onenewoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
 		4D1D9E2723EEB98D00CB9215 /* cameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraManager.swift; sourceTree = "<group>"; };
+		4D1D9E2A23EF06A000CB9215 /* siriSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siriSpeaker.swift; sourceTree = "<group>"; };
+		4D1D9E2C23EF07A800CB9215 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		4D1D9E3123EF43AF00CB9215 /* speakerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakerManager.swift; sourceTree = "<group>"; };
+		4D1D9E3423EF45E500CB9215 /* userInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = userInformation.storyboard; sourceTree = "<group>"; };
+		4D1D9E3723F078DC00CB9215 /* baseInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseInfoController.swift; sourceTree = "<group>"; };
+		4D1D9E3B23F0792500CB9215 /* userBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userBaseNavigationController.swift; sourceTree = "<group>"; };
 		4D205DFE23E728CE00F3BC19 /* onenewone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onenewone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D205E0123E728CE00F3BC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D205E0323E728CE00F3BC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +137,39 @@
 			path = camera;
 			sourceTree = "<group>";
 		};
+		4D1D9E2923EF068900CB9215 /* speaker */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D9E2A23EF06A000CB9215 /* siriSpeaker.swift */,
+			);
+			path = speaker;
+			sourceTree = "<group>";
+		};
+		4D1D9E2E23EF429C00CB9215 /* questionManager */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D9E3123EF43AF00CB9215 /* speakerManager.swift */,
+			);
+			path = questionManager;
+			sourceTree = "<group>";
+		};
+		4D1D9E3323EF45C800CB9215 /* storyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D9E3423EF45E500CB9215 /* userInformation.storyboard */,
+			);
+			path = storyBoard;
+			sourceTree = "<group>";
+		};
+		4D1D9E3623F0767700CB9215 /* questionUserControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D9E3723F078DC00CB9215 /* baseInfoController.swift */,
+				4D1D9E3B23F0792500CB9215 /* userBaseNavigationController.swift */,
+			);
+			path = questionUserControllers;
+			sourceTree = "<group>";
+		};
 		4D205DF523E728CE00F3BC19 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +195,7 @@
 		4D205E0023E728CE00F3BC19 /* onenewone */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D9E3323EF45C800CB9215 /* storyBoard */,
 				4D205E4523E72FD400F3BC19 /* manager */,
 				4D205E3423E72A4800F3BC19 /* views */,
 				4D205E3323E72A4200F3BC19 /* lib */,
@@ -187,6 +233,7 @@
 		4D205E3123E72A3200F3BC19 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D9E3623F0767700CB9215 /* questionUserControllers */,
 				4D205E3723E72A7700F3BC19 /* helper */,
 				4D205E3523E72A6500F3BC19 /* mainViewController.swift */,
 				4D205E4E23E73DD300F3BC19 /* userGetPhotoViewController.swift */,
@@ -198,6 +245,7 @@
 		4D205E3223E72A3B00F3BC19 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D9E2C23EF07A800CB9215 /* models.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -241,6 +289,8 @@
 		4D205E4523E72FD400F3BC19 /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D9E2E23EF429C00CB9215 /* questionManager */,
+				4D1D9E2923EF068900CB9215 /* speaker */,
 				4D1D9E2623EEB8A600CB9215 /* camera */,
 				4D205E4923E733CB00F3BC19 /* dataBaseManagerGroup */,
 			);
@@ -390,6 +440,7 @@
 			files = (
 				4D205E0E23E728CF00F3BC19 /* LaunchScreen.storyboard in Resources */,
 				4D205E0B23E728CF00F3BC19 /* Assets.xcassets in Resources */,
+				4D1D9E3523EF45E500CB9215 /* userInformation.storyboard in Resources */,
 				4D205E0923E728CE00F3BC19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +570,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D205E4B23E7341D00F3BC19 /* userDB.swift in Sources */,
+				4D1D9E3223EF43AF00CB9215 /* speakerManager.swift in Sources */,
+				4D1D9E3823F078DC00CB9215 /* baseInfoController.swift in Sources */,
+				4D1D9E2D23EF07A800CB9215 /* models.swift in Sources */,
 				4D205E3923E72A9D00F3BC19 /* BaseViewController.swift in Sources */,
 				4D1D9E2823EEB98D00CB9215 /* cameraManager.swift in Sources */,
 				4D205E0623E728CE00F3BC19 /* ViewController.swift in Sources */,
@@ -533,7 +587,9 @@
 				4D205E4F23E73DD300F3BC19 /* userGetPhotoViewController.swift in Sources */,
 				4D205E4D23E73A4B00F3BC19 /* GradientButton.swift in Sources */,
 				4D205E3623E72A6500F3BC19 /* mainViewController.swift in Sources */,
+				4D1D9E3C23F0792500CB9215 /* userBaseNavigationController.swift in Sources */,
 				4D205E3F23E72D5500F3BC19 /* preloaderPopupController.swift in Sources */,
+				4D1D9E2B23EF06A000CB9215 /* siriSpeaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
