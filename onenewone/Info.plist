@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>oneNewone kullanabilmek için kamera izinlerini vermiş olman gerekiyor.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>oneNewone kullanabilmek için mikrofon izinlerini vermiş olmanız gerekiyor.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
