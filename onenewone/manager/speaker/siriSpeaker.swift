@@ -18,11 +18,13 @@ enum QUESTION_STATUS {
 }
 
 protocol siriSpeakerDelegate:class {
-    func speechDidFinish()
-    func speechStart()
+    func SiriSpeechDidFinish()
+    func SiriSpeechStart()
 }
 
 class siriSpeaker: NSObject,AVSpeechSynthesizerDelegate {
+    private let TAG:String = "siriSpeaker:"
+    
 //    MARK:- class
     private var speechSynthesizer:AVSpeechSynthesizer?
     weak var delegate:siriSpeakerDelegate?
@@ -34,6 +36,7 @@ class siriSpeaker: NSObject,AVSpeechSynthesizerDelegate {
     
     private func setup() {
         speechSynthesizer = AVSpeechSynthesizer()
+        speechSynthesizer?.delegate = self
     }
 
     func startQuestion(sentence:AVSpeechUtterance?) {
@@ -44,10 +47,10 @@ class siriSpeaker: NSObject,AVSpeechSynthesizerDelegate {
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        delegate?.speechStart()
+        delegate?.SiriSpeechStart()
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        delegate?.speechDidFinish()
+        delegate?.SiriSpeechDidFinish()
     }
 }

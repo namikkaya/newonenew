@@ -122,12 +122,21 @@
                                     <segue destination="9mq-PE-nnB" kind="show" identifier="segueStart" id="9dZ-oJ-Scc"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cl4-L9-vot">
+                                <rect key="frame" x="184" y="832" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="B8t-sQ-bli" kind="show" id="dVS-Td-Fdt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jdu-T3-8PD" firstAttribute="leading" secondItem="zG3-Gy-iyt" secondAttribute="leading" constant="20" id="3J8-6w-Try"/>
                             <constraint firstItem="zG3-Gy-iyt" firstAttribute="trailing" secondItem="jdu-T3-8PD" secondAttribute="trailing" constant="20" id="7gA-7M-THD"/>
+                            <constraint firstItem="cl4-L9-vot" firstAttribute="centerX" secondItem="Vq8-sj-cR8" secondAttribute="centerX" id="Ho4-aF-OKa"/>
                             <constraint firstItem="0a8-6v-Ab1" firstAttribute="centerX" secondItem="Vq8-sj-cR8" secondAttribute="centerX" id="MRA-a4-UoO"/>
+                            <constraint firstItem="cl4-L9-vot" firstAttribute="bottom" secondItem="zG3-Gy-iyt" secondAttribute="bottom" id="Nvc-Br-EDs"/>
                             <constraint firstItem="0a8-6v-Ab1" firstAttribute="top" secondItem="jdu-T3-8PD" secondAttribute="bottom" constant="32" id="ph7-tM-xCY"/>
                             <constraint firstItem="jdu-T3-8PD" firstAttribute="top" secondItem="zG3-Gy-iyt" secondAttribute="top" constant="64" id="zhH-0y-nwU"/>
                         </constraints>
@@ -138,6 +147,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN1-HO-wCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="68.973214285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sXV-IT-XNC">
+            <objects>
+                <viewController id="B8t-sQ-bli" customClass="ViewController" customModule="onenewone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="diI-hc-P1d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foK-1W-nkx">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="foK-1W-nkx" firstAttribute="centerY" secondItem="diI-hc-P1d" secondAttribute="centerY" id="00v-Yq-Fc7"/>
+                            <constraint firstItem="foK-1W-nkx" firstAttribute="centerX" secondItem="diI-hc-P1d" secondAttribute="centerX" id="9FZ-De-jPB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1qE-WE-pp8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lzk-22-YPx"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="foK-1W-nkx" id="wXL-56-zRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhE-Q4-2x3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="841.74107142857144"/>
         </scene>
         <!--User Get Photo View Controller-->
         <scene sceneID="v6o-i1-18d">
@@ -211,23 +251,24 @@
                                 <viewLayoutGuide key="safeArea" id="kUb-G6-VU5"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJ4-RT-FhK">
-                                <rect key="frame" x="20" y="540" width="374" height="336"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="8" y="40" width="398" height="149"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="336" id="hYx-du-8oR"/>
+                                    <constraint firstAttribute="width" secondItem="HJ4-RT-FhK" secondAttribute="height" multiplier="398:149" id="W9j-Ai-LaM"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="HJ4-RT-FhK" firstAttribute="top" secondItem="btd-8n-Ad7" secondAttribute="top" constant="40" id="5jp-4T-9pN"/>
+                            <constraint firstItem="HJ4-RT-FhK" firstAttribute="leading" secondItem="hGU-do-5Gf" secondAttribute="leading" constant="8" id="89j-Q2-zBs"/>
                             <constraint firstAttribute="trailing" secondItem="lEX-OX-h8M" secondAttribute="trailing" id="DCH-vq-PSM"/>
                             <constraint firstItem="lEX-OX-h8M" firstAttribute="top" secondItem="btd-8n-Ad7" secondAttribute="top" id="Ivj-eC-6uo"/>
-                            <constraint firstAttribute="trailing" secondItem="HJ4-RT-FhK" secondAttribute="trailing" constant="20" symbolic="YES" id="JJ1-Mg-4qB"/>
-                            <constraint firstAttribute="bottom" secondItem="HJ4-RT-FhK" secondAttribute="bottom" constant="20" symbolic="YES" id="Y6K-6F-4jd"/>
-                            <constraint firstItem="HJ4-RT-FhK" firstAttribute="leading" secondItem="btd-8n-Ad7" secondAttribute="leading" constant="20" symbolic="YES" id="oTG-Zz-cyF"/>
+                            <constraint firstItem="hGU-do-5Gf" firstAttribute="trailing" secondItem="HJ4-RT-FhK" secondAttribute="trailing" constant="8" id="PT1-6Q-RhE"/>
                             <constraint firstAttribute="bottom" secondItem="lEX-OX-h8M" secondAttribute="bottom" id="sXe-96-VbC"/>
                             <constraint firstItem="lEX-OX-h8M" firstAttribute="leading" secondItem="btd-8n-Ad7" secondAttribute="leading" id="uUz-GE-FoC"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="hGU-do-5Gf"/>
                     </view>
                     <navigationItem key="navigationItem" id="eEc-dU-et0"/>
                     <connections>

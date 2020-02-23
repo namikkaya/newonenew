@@ -26,6 +26,8 @@ class cameraManager: NSObject {
         
         cameraPositionHolder = .front
         cameraConfig()
+        audioConfig()
+        startRecording()
     }
     
     private func cameraConfig() {
@@ -44,18 +46,13 @@ class cameraManager: NSObject {
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         videoPreviewLayer?.connection?.videoOrientation = .portrait
-        // yan
-        /*if (CGFloat((rootView?.frame.size.height)!) <= CGFloat((rootView?.frame.size.width)!)) {
-            videoPreviewLayer?.frame = CGRect(x: 0, y: 0, width: (rootView?.frame.size.width)!, height: (rootView?.frame.size.height)!)
-        }else{
-            videoPreviewLayer?.frame = CGRect(x: 0, y: 0, width: (rootView?.frame.size.height)!, height: (rootView?.frame.size.width)!)
-        }*/
         layer_autoSize()
-        
+    }
+    
+    private func startRecording() {
         previewView!.layer.addSublayer(videoPreviewLayer!)
         previewView!.setNeedsDisplay()
         captureSession?.startRunning()
-        
     }
     
     private func layer_autoSize() {
@@ -66,6 +63,26 @@ class cameraManager: NSObject {
     
     func autoRefreshView() {
         layer_autoSize()
+    }
+    
+    private func audioConfig() {
+        
+        let microphone = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInMicrophone, for: AVMediaType.audio, position: AVCaptureDevice.Position.unspecified)
+        
+        self.getAudioInputDevice(captureDevice: microphone) { (status:Bool?, input:AVCaptureDeviceInput?) in
+            if let status = status {
+                if status {
+                    if let input = input {
+                        if let session = captureSession {
+                            if session.canAddInput(input) {
+                                session.addInput(input)
+                            }
+                        }
+                        captureSession?.automaticallyConfiguresApplicationAudioSession = false
+                    }
+                }
+            }
+        }
     }
     
     
@@ -83,6 +100,20 @@ class cameraManager: NSObject {
             }
         }
         return avCapture
+    }
+    
+    func getAudioInputDevice(captureDevice:AVCaptureDevice?, completion: (Bool?,AVCaptureDeviceInput?)->()) {
+        if let captureDevice = captureDevice {
+            var input:AVCaptureDeviceInput?
+            do {
+                input = try AVCaptureDeviceInput(device: captureDevice)
+                completion(true, input)
+            } catch let error {
+                print("KAYA_HATA: \(error)")
+                completion(false, input)
+            }
+        }
+        
     }
     /// Kamera pozisyonu değiştirir
     public func changeCamera(){

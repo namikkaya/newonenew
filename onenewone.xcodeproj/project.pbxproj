@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		009AE2470C53CD654857599D /* Pods_onenewone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D2FC6789B4D0E28F5375CF /* Pods_onenewone.framework */; };
 		179E1CD0582C44FCF0DF76A9 /* Pods_onenewoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF5CF152E59A4CD3CDB7C72 /* Pods_onenewoneTests.framework */; };
+		4D027B5B23F99CDB00FB7383 /* speechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D027B5A23F99CDB00FB7383 /* speechRecognizer.swift */; };
+		4D027B5D2401B74800FB7383 /* textViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D027B5C2401B74800FB7383 /* textViewController.swift */; };
 		4D1D9E2523EEB75B00CB9215 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */; };
 		4D1D9E2823EEB98D00CB9215 /* cameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2723EEB98D00CB9215 /* cameraManager.swift */; };
 		4D1D9E2B23EF06A000CB9215 /* siriSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D9E2A23EF06A000CB9215 /* siriSpeaker.swift */; };
@@ -61,6 +63,8 @@
 		3654AFCF1256E53E6270C945 /* Pods_onenewone_onenewoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onenewone_onenewoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D2FC6789B4D0E28F5375CF /* Pods_onenewone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onenewone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49EDB5C8EF2597C1F8C091FD /* Pods-onenewone-onenewoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onenewone-onenewoneUITests.release.xcconfig"; path = "Target Support Files/Pods-onenewone-onenewoneUITests/Pods-onenewone-onenewoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D027B5A23F99CDB00FB7383 /* speechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speechRecognizer.swift; sourceTree = "<group>"; };
+		4D027B5C2401B74800FB7383 /* textViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textViewController.swift; sourceTree = "<group>"; };
 		4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
 		4D1D9E2723EEB98D00CB9215 /* cameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraManager.swift; sourceTree = "<group>"; };
 		4D1D9E2A23EF06A000CB9215 /* siriSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siriSpeaker.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1D9E2A23EF06A000CB9215 /* siriSpeaker.swift */,
+				4D027B5A23F99CDB00FB7383 /* speechRecognizer.swift */,
 			);
 			path = speaker;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				4D205E3523E72A6500F3BC19 /* mainViewController.swift */,
 				4D205E4E23E73DD300F3BC19 /* userGetPhotoViewController.swift */,
 				4D1D9E2423EEB75B00CB9215 /* cameraViewController.swift */,
+				4D027B5C2401B74800FB7383 /* textViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				4D205E0623E728CE00F3BC19 /* ViewController.swift in Sources */,
 				4D205E0223E728CE00F3BC19 /* AppDelegate.swift in Sources */,
 				4D205E3D23E72D1100F3BC19 /* extensions.swift in Sources */,
+				4D027B5B23F99CDB00FB7383 /* speechRecognizer.swift in Sources */,
 				4D205E0423E728CE00F3BC19 /* SceneDelegate.swift in Sources */,
 				4D205E4823E7334300F3BC19 /* dataBaseManager.swift in Sources */,
 				4D1D9E2523EEB75B00CB9215 /* cameraViewController.swift in Sources */,
@@ -585,6 +592,7 @@
 				4D205E4223E72EE200F3BC19 /* reachbilityTransition.swift in Sources */,
 				4D205E3B23E72CE300F3BC19 /* ReachbilityPopupController.swift in Sources */,
 				4D205E4F23E73DD300F3BC19 /* userGetPhotoViewController.swift in Sources */,
+				4D027B5D2401B74800FB7383 /* textViewController.swift in Sources */,
 				4D205E4D23E73A4B00F3BC19 /* GradientButton.swift in Sources */,
 				4D205E3623E72A6500F3BC19 /* mainViewController.swift in Sources */,
 				4D1D9E3C23F0792500CB9215 /* userBaseNavigationController.swift in Sources */,
@@ -770,7 +778,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = onenewone.onenewone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nk.onenewone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -789,7 +797,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = onenewone.onenewone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nk.onenewone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

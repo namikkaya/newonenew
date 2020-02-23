@@ -12,6 +12,11 @@ class userGetPhotoViewController: BaseViewController {
     private var dbMan:dataBaseManager?
     @IBOutlet weak var cameraButtonObject: UIButton!
     
+    
+    func completionHandler(_ status: Bool)->Void{
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DBConfig()
@@ -36,6 +41,11 @@ class userGetPhotoViewController: BaseViewController {
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        if segue.identifier == "cameraSegue" {
+            let vc:cameraViewController = segue.destination as! cameraViewController
+            vc.callBack = completionHandler(_:)
+        }
     }
     
 //    MARK:- IBAction

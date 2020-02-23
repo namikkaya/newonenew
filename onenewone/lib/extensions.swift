@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import SQLite
+import AVFoundation
+import Speech
 
 private var dataAssocKey = 0
 public var myHolderView:UIViewController?
@@ -163,5 +165,77 @@ extension Connection {
     public var userVersion: Int32 {
         get { return Int32(try! scalar("PRAGMA user_version") as! Int64)}
         set { try! run("PRAGMA user_version = \(newValue)") }
+    }
+}
+
+
+extension cameraViewController {
+    /// microfon izinleri
+    func askMicrophonePermission(completion: @escaping (_ success: Bool) -> Void) {
+        switch AVAudioSession.sharedInstance().recordPermission {
+        case AVAudioSession.RecordPermission.granted:
+            completion(true)
+            break
+        case .denied:
+            completion(false)
+            break
+        case .undetermined:
+            AVAudioSession.sharedInstance().requestRecordPermission { (granted) in
+                if granted {
+                    completion(true)
+                }else {
+                    completion(false)
+                }
+            }
+            break
+        default:
+            completion(false)
+        }
+    }
+    
+    func askCameraPermission(completion: @escaping (_ success: Bool) -> Void) {
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { (granted) in
+            if granted {
+                completion(true)
+            }else {
+                completion(false)
+            }
+        }
+    }
+    
+    func askSpeechPermission(completion: @escaping (_ success: Bool) -> Void) {
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            OperationQueue.main.addOperation {
+                switch authStatus {
+                case .authorized:
+                    completion(true)
+                    break
+                case .denied:
+                    completion(false)
+                    break
+                case .notDetermined:
+                    completion(false)
+                    break
+                case .restricted:
+                    completion(false)
+                    break
+                @unknown default:
+                    fatalError()
+                    break
+                }
+            }
+        }
+    }
+    
+    func infoAlert(title:String = "Başlık", msg:String = "Mesaj", completion: @escaping (_ success:Bool) -> Void) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "İptal", style: .cancel, handler: { (action) in
+            completion(false)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "İzinler", style: .default, handler: { (action) in
+            completion(true)
+        }))
+        self.present(alert, animated: true)
     }
 }

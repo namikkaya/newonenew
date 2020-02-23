@@ -24,6 +24,8 @@
 	<string>oneNewone kullanabilmek için kamera izinlerini vermiş olman gerekiyor.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>oneNewone kullanabilmek için mikrofon izinlerini vermiş olmanız gerekiyor.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>oneNewone kullanabilmek için konuşma tanıma izinlerini vermiş olmanız gerekiyor.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
